@@ -1,0 +1,77 @@
+body {
+    font-size: 10px;
+}
+
+.shanab {
+    position: absolute;
+    left: 7em;
+    width: 18em;
+    height: 18em;
+    color: black;
+    border-radius: 50%;
+    box-shadow: 15em 24em 0 0 currentColor,
+    30em 24em 0 0 currentColor;
+}
+
+.shanab::before {
+    content: "";
+    position: absolute;
+    width: 21em;
+    height: 12em;
+    border-bottom: 18em solid currentColor;
+    border-radius: 0 0 0 100%;
+    left: 3em;
+    top: 12em;
+    transform: rotate(-40deg);
+    transform-origin: right 21em;
+}
+
+.shanab::after {
+    content: "";
+    position: absolute;
+    width: 21em;
+    height: 12em;
+    border-bottom: 18em solid currentColor;
+    border-radius: 0 0 100% 0;
+    left:39em;
+    top: 12em;
+    transform: rotate(40deg);
+    transform-origin: left 21em;
+
+}
+
+.shanab::before {
+    animation: danceLeft 1s ease-in-out infinite;
+}
+
+.shanab::after {
+    animation: danceRight 1s ease-in-out infinite;
+}
+
+@keyframes danceLeft {
+    0% {
+        transform: rotate(-50deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+
+@keyframes danceRight {
+    0% {
+        transform: rotate(50deg);
+    }
+
+    50% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(50deg);
+    }
+}
