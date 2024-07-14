@@ -1,0 +1,65 @@
+body {
+    font-size: 10px;
+    color: #c3d4f0;
+    background-color: currentColor;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.ball {
+    border-top: 30em solid #f25b54;
+    border-left: 30em solid #f25b54;
+    border-bottom: 30em solid #f2f2f2;
+    border-right: 30em solid #f2f2f2;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    box-shadow: 5em 0.5em 1.3em #7784a8;
+}
+
+.ball::before {
+    content: "";
+    position: absolute;
+    width: 60em;
+    height: 1.7em;
+    background-color: #565656;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.empty-sides {
+    position: absolute;
+    width: 3em;
+    height: 1.7em;
+    background-color: currentColor;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 60em 0 #7784a8;
+}
+
+.button {
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    background-color: #565656;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1.2em solid #f2f2f2;
+}
